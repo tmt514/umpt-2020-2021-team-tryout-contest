@@ -1,0 +1,10 @@
+[book]
+authors = ["Shang-En Huang"]
+language = "en"
+multilingual = false
+src = "src"
+title = "UMPT 2020-2021 Team Tryout Contest Solution Booklet"
+
+[output.html]
+mathjax-support = true
+no-section-label = true
