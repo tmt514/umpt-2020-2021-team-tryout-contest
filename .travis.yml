@@ -23,4 +23,4 @@ deploy:
   local-dir: book
   keep-history: false
   on:
-    branch: gh-pages
+    branch: main
