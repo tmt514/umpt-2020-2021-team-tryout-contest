@@ -1,4 +1,5 @@
 # J: Jackson
+
 ## Solution Sketch
 
 This can be solved in a straight forward dynamic programming algorithm.
