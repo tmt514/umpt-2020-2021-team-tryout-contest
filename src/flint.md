@@ -1,6 +1,33 @@
 # F: Flint
 ## Solution Sketch
 
+For the ease of reading, for any set of integers \\(S=\\{s_1, s_2, \ldots, s_k\\}\\) we define \\(\gcd(S) = \gcd(s_1, s_2, \ldots, s_k)\\).
+
+### The Dynamic Programming Approach
+
+Let \\(dp(i, g)\\) be the number of non-empty subsets among the first \\(i\\) elements where \\(\gcd(S) = g\\).
+Then, when we consider a new element \\(a_{i+1}\\), we either add it to the subset or not. Hence, we can write the forward updating rule:
+
+$$\begin{aligned}
+dp(i+1, \gcd(g, a_{i+1})) &\texttt{+= }  dp(i, g)\\\\
+dp(i+1, g) &\texttt{+= } dp(i, g)
+\end{aligned}$$
+
+How many possible gcd values will we have? Well, what we know for sure is that this value is always a factor of some input values \\(a_j\\). Hence, a very loose upper bound would be \\(\sum_{i=1}^n d(a_i)\\) where \\(d(x)\\) is the number of factors to \\(x\\). Given the input specification, we know that \\(d(a_i)\le 2\sqrt{10^9}\approx 6.3\times 10^4\\), so, the total time complexity is \\(n\times \sum_{i=1}^n d(a_i) \approx 6.3\times 10^6\\).
+
+
+### The Inclusion-Exclusion Approach (Combinatorics + Number Theory)
+
+For any integer \\(g\\), it is very easy to compute the number of subsets \\(S\\) with \\(\gcd(S)=g\\). Using the idea of inclusion-exclusion, the answer can be computed by the formula below:
+
+$$
+\sum_{g=1}^\infty \mu(g) \left(2^{S_g} - 1\right)
+$$
+
+where \\(\mu(g)\\) is the [Möbius function](https://en.wikipedia.org/wiki/M%C3%B6bius_function) and \\(S_g\\) is the number of integers that is divisible by \\(g\\) from the input.
+
+Notice that the summands are non-zero only when \\(g\\) is a factor of some input value. Hence, the total time complexity here is simply \\(\sum_{i=1}^n d(a_i) \approx 6.3\times 10^4\\) plus the time you need to do factorization.
+
 ## Sample Code (C++)
 
 ```c++

@@ -1,6 +1,10 @@
 # E: East Lansing
 ## Solution Sketch
 
+Since there are at most 10 question marks, we enumerate all possibilities of the t-shirt colors, and then run a naive BFS/DFS to count the connected components.
+
+The time we need is about \\(2^{10}MN\approx 10^7\\).
+
 ## Sample Code (C++)
 
 ```c++

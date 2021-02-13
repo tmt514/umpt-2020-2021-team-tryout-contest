@@ -1,5 +1,13 @@
 # H: Holland
+
 ## Solution Sketch
+
+I believe this is the hardest problem in this contest.
+The main idea to this problem, is to notice that the serving time is the same for all customers.
+If people are lining up, the serving time is determined by the first person's arrival time plus some integer multiple of serving time.
+
+So, we can apply greedy algorithm (to choose customer with largest tips) assuming a range of people are lining up after customer \\(i\\).
+This gives us an algorithm that runs in \\(O(N^2\log N)\\) time.
 
 ## Sample Code (C++)
 

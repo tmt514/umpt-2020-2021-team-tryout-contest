@@ -1,6 +1,12 @@
 # I: Isle Royale
 ## Solution Sketch
 
+The main observation is that once the energy becomes zero, the problem reduces to the usual shortest path problem (that can be solved using Dijkstra's algorithm).
+
+So, we first run Dijkstra's algorithm on the reversed graph from site \\(N\\). Then, we run an Bellman-Ford style algorithm that answers the following: if we arrive a site within \\(steps\\) minutes (without replenish the energy), what would be the smallest consumption of the enregy?
+
+The total time complexity is \\(O(NM)\\).
+
 ## Sample Code (C++)
 
 ```c++

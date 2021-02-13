@@ -1,5 +1,10 @@
 # G: Grand Rabbits
+
 ## Solution Sketch
+
+Since \\(k \le 10\\), we can do binary search on the answer, and greedily (again on binary search) match each truck to a consecutive range of families.
+
+The time complexity is \\(QK\log N\approx 2\times 10^7\\).
 
 ## Sample Code (C++)
 

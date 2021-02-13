@@ -1,6 +1,15 @@
 # D: Detroit
 ## Solution Sketch
 
+This problem can be solved by dynamic programming.
+For any subset of vertices \\(S\\) we define \\(dp(S)\\) to be the minimum number of edges needed where all vertices in \\(S\\) reaches vertex 1.
+
+Using this definition, we notice that, for any edge \\(e=(u, v)\\) and any subset of vertices \\(S\\) that contains \\(v\\), we have \\(dp(S\cup \\{u\\}) \le dp(S) + 1\\).
+Hence, we can iterate through every possible subset (from the smallest to the largest, when they are represented in binary numbers).
+Within each iteration (with respect to the subset \\(S\\)), we consider all edges \\((u, v)\\) that reaches any vertex \\(v\\) in \\(S\\), and then update \\(dp(S\cup \\{u\\})\\) values accordingly.
+
+The time complexity of the algorithm is \\(O(2^N\cdot M)\\).
+
 ## Sample Code (C++)
 
 ```c++
