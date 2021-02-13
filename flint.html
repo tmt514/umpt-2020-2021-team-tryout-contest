@@ -1,0 +1,308 @@
+<!DOCTYPE HTML>
+<html lang="en" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>F: Flint - UMPT 2020-2021 Team Tryout Contest Solution Booklet</title>
+        
+        
+
+
+        <!-- Custom HTML head -->
+        
+
+
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        
+        <link rel="icon" href="favicon.svg">
+        
+        
+        <link rel="shortcut icon" href="favicon.png">
+        
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        
+        <link rel="stylesheet" href="css/print.css" media="print">
+        
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        
+        <link rel="stylesheet" href="fonts/fonts.css">
+        
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        
+
+        
+        <!-- MathJax -->
+        <script async type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="overview.html">Overview</a></li><li class="chapter-item expanded "><a href="ann_arbor.html">A: Ann Arbor</a></li><li class="chapter-item expanded "><a href="bois_blanc.html">B: Bois Blanc</a></li><li class="chapter-item expanded "><a href="canton.html">C: Canton</a></li><li class="chapter-item expanded "><a href="detroit.html">D: Detroit</a></li><li class="chapter-item expanded "><a href="east_lansing.html">E: East Lansing</a></li><li class="chapter-item expanded "><a href="flint.html" class="active">F: Flint</a></li><li class="chapter-item expanded "><a href="grand_rabbits.html">G: Grand Rabbits</a></li><li class="chapter-item expanded "><a href="holland.html">H: Holland</a></li><li class="chapter-item expanded "><a href="isle_royale.html">I: Isle Royale</a></li><li class="chapter-item expanded "><a href="jackson.html">J: Jackson</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                        
+                    </div>
+
+                    <h1 class="menu-title">UMPT 2020-2021 Team Tryout Contest Solution Booklet</h1>
+
+                    <div class="right-buttons">
+                        
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+
+                
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" name="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+                
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1><a class="header" href="#f-flint" id="f-flint">F: Flint</a></h1>
+<h2><a class="header" href="#solution-sketch" id="solution-sketch">Solution Sketch</a></h2>
+<p>For the ease of reading, for any set of integers \(S=\{s_1, s_2, \ldots, s_k\}\) we define \(\gcd(S) = \gcd(s_1, s_2, \ldots, s_k)\).</p>
+<h3><a class="header" href="#the-dynamic-programming-approach" id="the-dynamic-programming-approach">The Dynamic Programming Approach</a></h3>
+<p>Let \(dp(i, g)\) be the number of non-empty subsets among the first \(i\) elements where \(\gcd(S) = g\).
+Then, when we consider a new element \(a_{i+1}\), we either add it to the subset or not. Hence, we can write the forward updating rule:</p>
+<p>$$\begin{aligned}
+dp(i+1, \gcd(g, a_{i+1})) &amp;\texttt{+= }  dp(i, g)\\
+dp(i+1, g) &amp;\texttt{+= } dp(i, g)
+\end{aligned}$$</p>
+<p>How many possible gcd values will we have? Well, what we know for sure is that this value is always a factor of some input values \(a_j\). Hence, a very loose upper bound would be \(\sum_{i=1}^n d(a_i)\) where \(d(x)\) is the number of factors to \(x\). Given the input specification, we know that \(d(a_i)\le 2\sqrt{10^9}\approx 6.3\times 10^4\), so, the total time complexity is \(n\times \sum_{i=1}^n d(a_i) \approx 6.3\times 10^6\).</p>
+<h3><a class="header" href="#the-inclusion-exclusion-approach-combinatorics--number-theory" id="the-inclusion-exclusion-approach-combinatorics--number-theory">The Inclusion-Exclusion Approach (Combinatorics + Number Theory)</a></h3>
+<p>For any integer \(g\), it is very easy to compute the number of subsets \(S\) with \(\gcd(S)=g\). Using the idea of inclusion-exclusion, the answer can be computed by the formula below:</p>
+<p>$$
+\sum_{g=1}^\infty \mu(g) \left(2^{S_g} - 1\right)
+$$</p>
+<p>where \(\mu(g)\) is the <a href="https://en.wikipedia.org/wiki/M%C3%B6bius_function">Möbius function</a> and \(S_g\) is the number of integers that is divisible by \(g\) from the input.</p>
+<p>Notice that the summands are non-zero only when \(g\) is a factor of some input value. Hence, the total time complexity here is simply \(\sum_{i=1}^n d(a_i) \approx 6.3\times 10^4\) plus the time you need to do factorization.</p>
+<h2><a class="header" href="#sample-code-c" id="sample-code-c">Sample Code (C++)</a></h2>
+<pre><code class="language-c++">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+
+const int MOD = 1e9 + 7;
+int main() {
+  int n;
+  int a[105];
+  long long two[105];
+  map&lt;int, int&gt; cnt;
+  map&lt;int, int&gt; mark;
+  cin &gt;&gt; n;
+  two[0] = 1;
+  for (int i = 1; i &lt;= n; i++) two[i] = two[i - 1] * 2 % MOD;
+  for (int i = 0; i &lt; n; i++) cin &gt;&gt; a[i];
+  for (int i = 0; i &lt; n; i++) {
+    int x = a[i];
+    vector&lt;int&gt; pf;
+    for (int p = 2; p * p &lt;= x; p++) {
+      if (x % p == 0) {
+        pf.push_back(p);
+        while (x % p == 0) x /= p;
+      }
+    }
+
+    if (x &gt; 1) pf.push_back(x);
+    for (int state = 0; state &lt; (1 &lt;&lt; pf.size()); state++) {
+      int g = 1, cc = 0;
+      for (int j = 0; j &lt; pf.size(); j++) {
+        if ((1 &lt;&lt; j) &amp; state) {
+          ++cc;
+          g *= pf[j];
+        }
+      }
+      cnt[g]++;
+      mark[g] = cc % 2;
+    }
+  }
+
+  long long ans = 0;
+  for (auto it : cnt) {
+    int g = it.first, c = it.second;
+    if (mark[g] == 0) {
+      ans += two[c] - 1;
+    } else {
+      ans -= two[c] - 1;
+    }
+  }
+  ans = (ans % MOD + MOD) % MOD;
+  cout &lt;&lt; ans &lt;&lt; endl;
+  return 0;
+}
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                        
+                            <a rel="prev" href="east_lansing.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+                        
+
+                        
+                            <a rel="next" href="grand_rabbits.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+                        
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                
+                    <a rel="prev" href="east_lansing.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+                
+
+                
+                    <a rel="next" href="grand_rabbits.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+                
+            </nav>
+
+        </div>
+
+        
+
+        
+
+        
+
+        
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+        
+
+        
+
+        
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+        
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+        
+
+        
+
+    </body>
+</html>
