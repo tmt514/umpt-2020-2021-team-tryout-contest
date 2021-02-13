@@ -4,15 +4,15 @@ Contest can be accessed here at codeforces group: [https://codeforces.com/group/
 
 ## Some Statistics
 
-| Problem | Accepted Submissions | First Accepted Time |
-|:---:|:---:|:---:|
-| A | 13 | 00:02 |
-| B | 1 | 02:40 |
-| C | 11 | 00:22 |
-| D | 2 | 02:26 |
-| E | 3 | 01:22 |
-| F | 5 | 01:05 |
-| G | 2 | 01:50 |
-| H | 0 | -- |
-| I | 1 | 02:03 |
-| J | 9 | 00:16 |
+| Problem | Accepted Submissions | First Accepted Time | By |
+|:---:|:---:|:---:|:---:|
+| A | 13 | 00:02 | runoxinabox |
+| B | 1 | 02:40 | runoxinabox |
+| C | 11 | 00:19 | pusheen |
+| D | 2 | 00:45 | pusheen |
+| E | 3 | 01:22 | ramchandra |
+| F | 5 | 01:05 | ramchandra |
+| G | 2 | 01:50 | ramchandra |
+| H | 0 | -- | |
+| I | 1 | 02:03 | tonyb7 |
+| J | 9 | 00:16 | ranchandra |
